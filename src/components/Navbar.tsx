@@ -2,20 +2,20 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="absolute top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4">
+    <nav className="absolute top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4" style={{ width: "100%", maxWidth: "90vw" }}>
       <div
         className="
-          flex items-center justify-between
+          relative flex items-center
           px-6 py-3 md:px-8 md:py-4
           rounded-full
           bg-white/5 border border-white/10 
           shadow-lg
           backdrop-blur-md
         "
-        style={{ minWidth: "320px", maxWidth: "90vw" }} // responsive min/max width
+        style={{ minWidth: "320px", maxWidth: "90vw" }}
       >
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 z-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-white"
@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
           </span>
         </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-6 text-white text-opacity-80 font-medium">
+        {/* Navigation Links (Centered) */}
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center space-x-6 text-white text-opacity-80 font-medium">
           <a href="#" className="hover:text-white transition-colors duration-200">Home</a>
           <a href="#" className="hover:text-white transition-colors duration-200">Features</a>
           <a href="#" className="hover:text-white transition-colors duration-200">Pricing</a>
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Call to Action Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="ml-auto hidden md:flex items-center space-x-4 z-10">
           <a
             href="#"
             className="px-4 py-2 border border-white/30 text-white text-opacity-80 rounded-full hover:bg-white/10 transition"

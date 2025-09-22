@@ -1,15 +1,16 @@
+import FeaturesSection from '@/components/Feature'
 import HeroSection from '@/components/HeroSection'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
-
-const page = () => {
+const Page = () => {
   return (
-    <div>
+    <div className="bg-black text-white w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <FeaturesSection />
     </div>
   )
 }
 
-export default page
+export default Page
