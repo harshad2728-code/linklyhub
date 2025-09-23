@@ -1,5 +1,7 @@
+import ComparisonTable from '@/components/ComparisonTable'
 import FeaturesSection from '@/components/Feature'
 import HeroSection from '@/components/HeroSection'
+import HowItWorksSection from '@/components/HowItWorks'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
@@ -9,6 +11,8 @@ const Page = () => {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
+      <HowItWorksSection />
+      <ComparisonTable />
     </div>
   )
 }

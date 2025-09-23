@@ -3,7 +3,7 @@
 import React from "react";
 import Ballpit from "@/3dcomponents/Ballpit";
 import TextPressure from "@/3dcomponents/TextPressure";
-import { Link } from "lucide-react";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const HeroSection: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       {/* Content Layer */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
         {/* Logo/Heading */}
-        <div className="w-[120%] max-w-[800px] mb-8 sm:mb-12">
+        <div className="w-[120%] max-w-[800px] mb-8 sm:mb-12 mt-16">
           <TextPressure
             text="LinklyHub"
             flex={true}
@@ -33,21 +33,17 @@ const HeroSection: React.FC = () => {
             italic={true}
             textColor="#ffffff"
             strokeColor="#ff0000"
-            minFontSize={150} // slightly smaller on mobile
+            minFontSize={150}
           />
         </div>
 
-        {/* Tagline - hidden on mobile */}
-        <p className="hidden md:block text-2xl md:text-3xl font-bold mb-4 tracking-wide">
-          Seamlessly connect, organize & share your digital world <Link className="inline-block ml-2" size={24} />
-        </p>
+        {/* Tagline */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+          Empower Your <span className="text-lime-400">Micro-Business</span>{" "}
+          with LinklyHub
+        </h1>
 
-        {/* Sub text / description - hidden on mobile */}
-        <p className="hidden md:block text-lg md:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed italic">
-          LinklyHub empowers creators and teams to manage all their links,
-          resources, and digital tools in one powerful hub — beautifully simple,
-          endlessly flexible.
-        </p>
+      
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
