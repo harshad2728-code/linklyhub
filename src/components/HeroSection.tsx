@@ -3,7 +3,7 @@
 import React from "react";
 import Ballpit from "@/3dcomponents/Ballpit";
 import TextPressure from "@/3dcomponents/TextPressure";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Button } from "./ui";
 
 const HeroSection: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
         {/* Logo/Heading */}
         <div className="w-[120%] max-w-[800px] mb-8 sm:mb-12 mt-16">
           <TextPressure
-            text="LinklyHub"
+            text="DireQtKart"
             flex={true}
             alpha={false}
             stroke={false}
@@ -50,9 +50,11 @@ const HeroSection: React.FC = () => {
           <button className="px-8 py-3 rounded-full bg-white text-black font-semibold shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
             Get Started
           </button>
-          <button className="px-8 py-3 rounded-full bg-[#00FFFF] text-black font-semibold hover:bg-[#33FFFF] transition transform hover:scale-105">
+          <Button
+          variant="primary"
+          >
             Book a Demo
-          </button>
+          </Button>
         </div>
       </div>
     </section>
