@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
           <Image
             src="/images/logo1.png"
             alt="Workflow"
-            width={210}
-            height={210}
+            width={150}
+            height={150}
           />
         </div>
 

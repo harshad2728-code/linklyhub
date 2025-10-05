@@ -9,22 +9,21 @@ import Lottie from "lottie-react";
 import loginani from "../../../public/Animations/Login.json";
 import Signup from "../../../public/Animations/Market.json";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // --- Icons ---
 const GoogleIcon = () => <GoogleSvg />;
 
 const LogoIcon = () => (
-  <svg
-    className="w-6 h-6 text-gray-800"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-  </svg>
+  <Image
+    src="/images/logo1.png" 
+    alt="DireQtKart Logo"
+    width={150}
+    height={150}
+    className="rounded-md"
+  />
+
 );
 
 // --- Inputs & Buttons ---
@@ -58,6 +57,7 @@ const SocialButton = ({ icon }: { icon: React.ReactNode }) => (
 // --- Main Component ---
 const SlidingAuthPage: React.FC = () => {
   const [isSignUpActive, setIsSignUpActive] = useState(false);
+  const router = useRouter();
 
   const formContainerVariants = {
     inactive: { opacity: 0, zIndex: 10, transition: { duration: 0.3 } },
@@ -97,6 +97,7 @@ const SlidingAuthPage: React.FC = () => {
                 <FormInput icon={<Mail size={16} />} type="email" placeholder="Email" />
                 <FormInput icon={<Lock size={16} />} type="password" placeholder="Password" />
                 <button
+                  onClick={Router.push("/login")}>
                   type="submit"
                   className="w-full mt-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 px-6 rounded-full text-sm hover:opacity-90 transition"
                 >
@@ -122,9 +123,8 @@ const SlidingAuthPage: React.FC = () => {
             animate={!isSignUpActive ? "active" : "inactive"}
           >
             <div className="w-full max-w-sm">
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex items-center gap-2 mb-3">
                 <LogoIcon />
-                <span className="font-semibold text-lg text-gray-200">Cogie</span>
               </div>
 
               <h2 className="text-3xl font-bold text-gray-100 mb-2">
@@ -178,7 +178,6 @@ const SlidingAuthPage: React.FC = () => {
               <p className="text-center text-xs text-gray-400 mt-8">
                 Don’t have an account?{" "}
                 <span
-                  onClick={() => setIsSignUpActive(true)}
                   className="font-bold text-purple-400 hover:underline cursor-pointer"
                 >
                   Sign Up
