@@ -10,7 +10,7 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="bg-black text-white w-full min-h-screen overflow-x-hidden overflow-y-scroll scroll-smooth hide-scrollbar">
+    <div className="bg-black text-white w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <FeaturesSection />
