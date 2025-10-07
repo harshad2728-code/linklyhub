@@ -25,12 +25,12 @@ const Sidebar: React.FC = () => {
 
   return (
     <motion.aside
-      animate={{ width: collapsed ? 80 : 256 }} // 20*4=80px, 64*4=256px
+      animate={{ width: collapsed ? 80 : 240 }} // 20*4=80px, 64*4=256px
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="relative flex flex-col h-screen border-r border-slate-800 bg-[#0c1017] text-gray-100 shadow-lg"
+      className="sticky top-0 flex flex-col h-screen border-r border-slate-800 bg-[#0c1017] text-gray-100 shadow-lg"
     >
       {/* Header Section */}
-      <div className="flex items-center justify-between h-20 border-b border-white/10 px-5 bg-white/5">
+      <div className="flex items-center justify-between h-15 border-b border-white/10 px-5 bg-white/5">
         <div className="flex items-center gap-3">
           <Image
             src="/images/logo1.png"
@@ -143,7 +143,7 @@ const Sidebar: React.FC = () => {
       </nav>
 
       {/* Footer / Profile */}
-      <div className="p-4 border-t border-white/10 bg-white/5">
+      <div className="p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {!imgError ? (

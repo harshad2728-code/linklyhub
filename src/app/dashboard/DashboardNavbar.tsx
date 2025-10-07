@@ -14,11 +14,13 @@ const DashboardNavbar: React.FC<{
 }> = ({ onToggleSidebar, collapsed }) => {
     const [openProfile, setOpenProfile] = useState(false);
     const [imgError, setImgError] = useState(false);
-    const profilePic = "https://randomuser.me/api/portraits/men/75.jpg";
+    const profilePic = "https://randomuser.me/api/portraits/men/45.jpg";
+
     const { theme, setTheme } = useTheme();
 
     return (
-        <header className="sticky top-0 z-50 flex items-center justify-between h-20 w-full border-b border-white/10 px-5 text-gray-100 shadow-md">
+        <header className="sticky top-0 z-50 flex items-center justify-between h-[60px] w-full border-b border-white/10 px-5 text-gray-100 bg-gray-900/95 backdrop-blur-md shadow-md">
+
 
             {/* Left Section */}
             <div className="flex items-center gap-3">

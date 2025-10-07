@@ -20,9 +20,9 @@ export interface SidebarItem {
 
 const SidebarData: SidebarItem[] = [
   { label: "Main Menu", isMainMenu: true },
-  { label: "Dashboard", icon: Home, url: "/dashboard" },
-  { label: "Products", icon: ShoppingBag, url: "/products" },
-  { label: "Orders", icon: Package, url: "/orders" },
+  { label: "Home", icon: Home, url: "/dashboard" },
+  { label: "Products", icon: ShoppingBag, url: "/dashboard/products" },
+  { label: "Orders", icon: Package, url: "/dashboard/orders" },
   { label: "Payments", icon: CreditCard, url: "/payments" },
   { label: "Analytics", icon: BarChart3, url: "/analytics" },
   { label: "Customers", icon: Users, url: "/customers" },
