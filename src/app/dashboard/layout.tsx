@@ -19,7 +19,7 @@ export default function DashboardLayout({
           collapsed={collapsed}
           onToggleSidebar={() => setCollapsed(!collapsed)}
         />
-        <main className="flex-1 p-6 bg-[#05070a] text-gray-100">{children}</main>
+        <main className="flex-1 p-6 bg-black text-gray-100">{children}</main>
       </div>
     </div>
   );

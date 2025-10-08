@@ -7,7 +7,6 @@ const orders = [
   { id: "#ORD-1022", product: "Smartwatch Pro X", amount: "$250", status: "Pending", date: "Oct 5, 2025" },
   { id: "#ORD-1021", product: "Gaming Mouse", amount: "$80", status: "Cancelled", date: "Oct 4, 2025" },
   { id: "#ORD-1020", product: "Laptop Stand", amount: "$45", status: "Delivered", date: "Oct 3, 2025" },
-  { id: "#ORD-1019", product: "Bluetooth Speaker", amount: "$99", status: "Shipped", date: "Oct 2, 2025" },
 ];
 
 const statusColors: Record<string, string> = {
@@ -19,7 +18,7 @@ const statusColors: Record<string, string> = {
 
 const RecentOrders: React.FC = () => {
   return (
-    <div className="bg-[#0F172A] rounded-xl border border-gray-700/40 p-6 shadow-xl w-full hover:border-gray-600 transition-all duration-300 h-full">
+    <div className=" rounded-xl border border-gray-700/40 p-6 shadow-xl w-full hover:border-gray-600 transition-all duration-300 h-full">
       <div className="flex justify-between items-center mb-5">
         <div>
           <h3 className="text-lg font-semibold text-gray-100">Recent Orders</h3>

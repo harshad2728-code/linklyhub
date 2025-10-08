@@ -4,6 +4,8 @@ import { KPIWidget } from "@/components/charts/KPIWidget";
 import BestSellingProducts from "@/components/charts/BestSellingProducts";
 import RecentOrders from "@/components/charts/RecentOrders";
 import RevenuePieChart from "@/components/charts/RevenuePieChart";
+import LowStockProducts from "@/components/charts/LowStockProducts";
+import EarningsOverview from "@/components/charts/EarningOverview";
 
 export default function DashboardPage() {
   return (
@@ -36,7 +38,9 @@ export default function DashboardPage() {
         />
         <div className="bg-gray-850 p-6 rounded-xl shadow-xl flex flex-col justify-between border border-gray-700/40 hover:border-gray-600 transition duration-300">
           <div>
-            <h3 className="text-white font-extrabold text-lg mb-2">Explore Data Insights</h3>
+            <h3 className="text-white font-extrabold text-lg mb-2">
+              Explore Data Insights
+            </h3>
             <p className="text-gray-400 text-sm mb-4">
               Uncover performance and visitor insights with our analytics wizardry.
             </p>
@@ -53,7 +57,7 @@ export default function DashboardPage() {
         <BestSellingProducts />
       </div>
 
-      {/* Recent Orders + KPI Row (75% / 25%) */}
+      {/* Recent Orders + Revenue Pie */}
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
         <div className="lg:col-span-2">
           <RecentOrders />
@@ -61,6 +65,11 @@ export default function DashboardPage() {
         <div className="lg:col-span-1">
           <RevenuePieChart />
         </div>
+      </div>
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4 mt-8">
+        <LowStockProducts />
+        <EarningsOverview />
       </div>
     </div>
   );
